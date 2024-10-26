@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="d-flex bg-info border p-3 align-items-center">
+        <h1 class="text-light">User Portal</h1>
+        <button onclick="logout()" class="btn btn-warning">Logout</button>
+    </div>
+    <div class="row" style="height: 100vh;">
+    <div class="col-2 bg-info rounded"></div>
+    <div class="col-10 rounded p-3">
+        <h1 id="result">Welcome User...</h1>
+    </div>
+    </div>
+</body>
+<script>
+    if(localStorage.getItem("username")){
+        result.innerText = `Welcome ${localStorage.getItem("username")}...`
+    }else{
+        alert("Login Please...")
+        window.location = "login.html"
+    }
+</script>
+<script src="./main.js"></script>
+</html>
